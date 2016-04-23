@@ -1,3 +1,4 @@
-require_relative 'app/app.rb'
+require 'rubygems'
+require_relative 'app.rb'
 
-run Sinatra::Application
+run IPlayer
