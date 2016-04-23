@@ -1,0 +1,16 @@
+<div ng-init="getProgramList('a', '1')" class="list">
+  <h2>A</h2>
+  <div>
+  <a href="#/a" id="A1" ng-click="getProgramList('a', '1')">1</a>
+  <a href="#/a" id="A2" ng-click="getProgramList('a', '2')">2</a>
+  <a href="#/a" id="A3" ng-click="getProgramList('a', '3')">3</a>
+  <a href="#/a" id="A4" ng-click="getProgramList('a', '4')">4</a>
+</div>
+<ul>
+  <li ng-repeat="program in programs">
+    <p class="title"><a href="http://bbc.co.uk/iplayer/episode/{{program.initial_children[0].id}}" id="{{program.title}}">{{program.title}}</a></p>
+    <a id="{{program.image}}" href="http://bbc.co.uk/iplayer/episode/{{program.initial_children[0].id}}"><img src="{{program.image}}" title="Watch {{program.title}}"></a>
+    <p class="synopsis">{{program.synopses.small}}</p>
+  </li>
+</ul>
+</div>
